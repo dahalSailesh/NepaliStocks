@@ -13,7 +13,7 @@ const Navbar = () => {
     <>
       <Nav>
         <NavLink to="/">
-          <h1>Nepali Stocks</h1>
+          <h1>Lagaani</h1>
         </NavLink>
         <Bars />
         <NavMenu>

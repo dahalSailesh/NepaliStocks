@@ -1,18 +1,83 @@
 import React from "react";
 
-const SignUp = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "90vh",
-      }}
-    >
-      <h1>Sign Up For Emails!</h1>
-    </div>
-  );
-};
+export default class NameForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { firstName: "", lastName: "", email: "", password: "" };
 
-export default SignUp;
+    this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
+    this.handleLastNameChange = this.handleLastNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleFirstNameChange(event) {
+    this.setState({ firstName: event.target.value });
+  }
+
+  handleLastNameChange(event) {
+    this.setState({ lastName: event.target.value });
+  }
+
+  handleEmailChange(event) {
+    this.setState({ email: event.target.value });
+  }
+
+  handlePasswordChange(event) {
+    this.setState({ password: event.target.value });
+  }
+
+  handleSubmit(event) {
+    alert(
+      "A name was submitted: " +
+        this.state.firstName +
+        " " +
+        this.state.lastName
+    );
+    event.preventDefault();
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            First Name:
+            <input
+              type="text"
+              value={this.state.name}
+              onChange={this.handleFirstNameChange}
+            />
+          </label>
+          <label>
+            Last Name:
+            <input
+              type="text"
+              value={this.state.lastName}
+              onChange={this.handleLastNameChange}
+            />
+          </label>
+          <label>
+            Email:
+            <input
+              type="text"
+              value={this.state.email}
+              onChange={this.handleEmailChange}
+            />
+          </label>
+          <label>
+            Password:
+            <input
+              type="text"
+              value={this.state.password}
+              onChange={this.handlePasswordChange}
+            />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    );
+  }
+}
+
