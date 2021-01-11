@@ -42,6 +42,7 @@ export default class NameForm extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <br />
           <label>
             First Name:
             <input
@@ -50,6 +51,7 @@ export default class NameForm extends React.Component {
               onChange={this.handleFirstNameChange}
             />
           </label>
+          <br />
           <label>
             Last Name:
             <input
@@ -58,6 +60,7 @@ export default class NameForm extends React.Component {
               onChange={this.handleLastNameChange}
             />
           </label>
+          <br />
           <label>
             Email:
             <input
@@ -66,6 +69,7 @@ export default class NameForm extends React.Component {
               onChange={this.handleEmailChange}
             />
           </label>
+          <br />
           <label>
             Password:
             <input
@@ -74,6 +78,7 @@ export default class NameForm extends React.Component {
               onChange={this.handlePasswordChange}
             />
           </label>
+          <br />
           <input type="submit" value="Submit" />
         </form>
       </div>
