@@ -1,5 +1,6 @@
 import React from "react";
 
+// the state is empty right now because it's static; f(null) = UI
 const Financials = () => {
   return (
     <div
