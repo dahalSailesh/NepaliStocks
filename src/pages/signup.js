@@ -1,8 +1,8 @@
 import React from "react";
 
 export default class NameForm extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { firstName: "", lastName: "", email: "", password: "" };
 
     this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
